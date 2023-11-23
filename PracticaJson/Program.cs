@@ -1,6 +1,10 @@
-﻿namespace PracticaJson
+﻿
+using System;
+using System.Text.Json;
+
+namespace PracticaJson
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -18,9 +22,43 @@
             string ejercicio3 = File.ReadAllText(pathEjercicioTres);
 
             string ejercicio4 = File.ReadAllText(pathEjercicioCuatro);
-
-
             
+            try
+            {
+                CEjercicio1 Ejercicio1 = JsonSerializer.Deserialize<CEjercicio1>(ejercicio1)!;
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine("Hubo un error al leer el Json");
+            }
+
+            try 
+            {
+                CEjercicio2 Ejercicio2 = JsonSerializer.Deserialize<CEjercicio2>(ejercicio2)!;
+            }
+            catch(Exception ex) 
+            {
+                Console.WriteLine("Hubo un error al leer el Json");
+            }
+
+            try
+            {
+                CEjercicio3 Ejercicio3 = JsonSerializer.Deserialize<CEjercicio3>(ejercicio3)!;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Hubo un error al leer el Json");
+            }
+
+            try
+            {
+                CEjercicio4 Ejercicio4 = JsonSerializer.Deserialize<CEjercicio4>(ejercicio4)!;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Hubo un error al leer el Json");
+            }
+
         }
     }
 }
