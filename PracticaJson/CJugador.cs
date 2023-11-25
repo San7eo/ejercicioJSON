@@ -8,9 +8,9 @@ namespace PracticaJson
 {
     public class CJugador
     {
-        public string nombre {  get; set; }
-        public uint kills {  get; set; }
-        public uint death {  get; set; }
+        public string Nombre {  get; set; }
+        public uint Kills {  get; set; }
+        public uint Death {  get; set; }
 
 
     }

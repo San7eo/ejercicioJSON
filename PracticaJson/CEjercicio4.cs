@@ -1,50 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using static PracticaJson.CEjercicio4.Productos;
+
+using static PracticaJson.CEjercicio4.CProductos;
 
 namespace PracticaJson
 {
     public class CEjercicio4
     {   
-        public List<Productos> productos {  get; set; }
+        public List<CProductos> Productos {  get; set; }
 
         public CEjercicio4 ()
         {
-            List<Productos> product = new List<Productos> ();
+            List<CProductos> product = new List<CProductos> ();
             List<string> eti = new List<string>();
             
         }
-        public class Productos
+        public class CProductos
         {
-            public string nombre { get; set; }
-            public float precio { get; set; }
+            public string Nombre { get; set; }
+            public float Precio { get; set; }
 
-            public uint existencias { get; set; }
+            public uint Existencias { get; set; }
 
             [JsonPropertyName("descuento_disponible")]
-            public bool descuento { get; set; }
+            public bool Descuento { get; set; }
 
-            public List<string> etiquetas { get; set; }
+            public List<string> Etiquetas { get; set; }
 
-            public Detalle detalles { get; set; }
+            public Detalle Detalles { get; set; }
 
             public class Detalle
             {
-                public float peso { get; set; }
+                public float Peso { get; set; }
 
-                public Dimensiones dimensiones { get; set; }
+                public CDimensiones Dimensiones { get; set; }
 
-                public class Dimensiones
+                public class CDimensiones
                 {
-                    public int alto { get; set; }
+                    public int Alto { get; set; }
 
-                    public int ancho { get; set; }
+                    public int Ancho { get; set; }
 
-                    public int profundidad { get; set; }
+                    public int Profundidad { get; set; }
                 }
             }
 
